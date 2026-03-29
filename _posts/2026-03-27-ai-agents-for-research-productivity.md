@@ -7,22 +7,18 @@ description: "Notes from a March 27, 2026 UVA share session on Claude Code, Ryan
 
 On **March 27, 2026**, I gave a lab share session on how I use AI agents in day-to-day life and work.
 
-The session was less about generic "AI productivity" and more about a change in how I think about software and daily workflows. What interests me now is not just asking a model for help in one isolated moment, but building systems that carry context, keep running after I stop typing, and start to feel like part of my working environment.
+The session was less about generic "AI productivity" and more about a shift in how I think about software and daily workflows. What interests me now is not just asking a model for help in one isolated moment, but building systems that carry context, keep working after I stop typing, and start to feel like part of the environment itself.
 
-I started with a simple question: what does an AI-powered day actually look like? For me, that now includes things like automated parking, morning news and email triage, overnight paper review, experiment runs, software shipping, and background research workflows. None of those pieces is the whole story by itself. What matters is that they are beginning to connect into one continuous layer of support rather than a pile of disconnected demos.
+The main point of the talk was simple: the interesting change is not that chatbots are getting better. It is that agents can now be organized into workflows, connected to tools, and given memory and context that persist across tasks.
 
-From there, I spent a good portion of the talk on **Claude Code**, since it is the tool that made most of the rest possible. I focused on the parts that have mattered most in practice: long-lived sessions, reusable commands, MCP integrations, and `CLAUDE.md` as a kind of project memory. I also showed how I use it for concrete research work, from data analysis and experiment scripting to debugging and result parsing. What has made it useful for me is not just that it can write code, but that it can actually run things, inspect failures, and keep iterating until the workflow works.
+I used **Claude Code** as the main example because it has been the tool that made this shift concrete for me. What matters most is not just code generation, but the ability to run commands, inspect outputs, call tools, and iterate inside a real working loop.
 
-I then talked about **RyanHub**, a personal AI iOS app that has gradually become a way for me to think through personal context, sensing, and interaction design. The core idea there is a shared context layer, which I call the **PersonalContext bus**. Instead of treating calendar, health, sensing, parking, and reading as separate silos, the app lets those modules feed into the same stream of context so the AI can reason across them. That is also why it feels closely connected to our lab's work: it is effectively a self-hosted sensing-and-intervention platform that I use in everyday life.
+I also shared two systems that reflect where my thinking is going. **RyanHub** is my attempt to build personal AI around shared context rather than isolated features. **AgentOS** is my attempt to treat agents less like chats and more like an organization, with roles, memory, routing, and review.
 
-The other major thread was **AgentOS**, which is the clearest example I have right now of what happens when you keep pushing past one-shot prompting. I described it as a beta one-person company: a team of specialized agents with persistent roles, memory, routing, and review. What I wanted to emphasize was not the novelty of having many agents, but the fact that they can be organized, monitored, and made accountable. Once you add handoffs, memory, and review layers, agents start to behave less like disposable chats and more like an operating structure.
-
-I ended with a few mindset shifts that have felt increasingly important to me. One is moving from **executor to leader**: spending less time doing everything myself and more time directing systems well. Another is moving from isolated **tools to systems**: getting value not from a single clever command, but from shared context and composition. And the third is moving from **sessions to institutions**: if agents can accumulate memory and operate within stable workflows, they begin to build continuity over time instead of resetting to zero.
+The broader mindset shift, at least for me, is from **executor to leader**, from isolated **tools to systems**, and from individual **sessions to institutions**. Once agents can accumulate memory and operate within stable workflows, the question stops being "what prompt should I use?" and becomes "what kind of system am I building?"
 
 If there was a single theme across the whole session, it was that I am less interested in AI as a smarter interface and more interested in AI as infrastructure: something that can coordinate work, carry context, and become part of the environment in which research and daily life happen.
 
 If you want the full deck, it is available here:
 
 - [UVA March 27 AI Agent Share Session (PDF)]({{ '/ai-agents-for-research-productivity.pdf' | relative_url }})
-
-In that sense, the talk sat across both sides of my current work. RyanHub reflects my interest in personal context, sensing, and health-related AI systems. AgentOS reflects my interest in building agent infrastructure that is reliable, inspectable, and usable in the real world.
