@@ -409,17 +409,6 @@ small,
   object-fit: cover;
 }
 
-.publication-list {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.publication-card {
-  background: rgba(255, 255, 255, 0.8);
-}
-
 .publication-head,
 .venture-card-head {
   display: flex;
@@ -428,26 +417,12 @@ small,
   gap: 1rem;
 }
 
-.publication-title {
-  margin-bottom: 0.4rem;
-  font-size: 1.15rem;
-}
-
 .publication-meta,
 .publication-authors,
 .publication-note,
 .venture-desc,
 .media-year {
   color: var(--muted);
-}
-
-.publication-authors {
-  margin-bottom: 0.55rem;
-}
-
-.publication-note {
-  margin-bottom: 0;
-  font-style: italic;
 }
 
 .pill-badge {
@@ -481,6 +456,79 @@ small,
 
 .record-link:hover {
   transform: translateY(-1px);
+}
+
+.publication-list {
+  margin-top: 1.15rem;
+  margin-bottom: 2.2rem;
+}
+
+.publication-entry {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 1.35rem;
+  padding: 1.05rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.publication-entry:last-child {
+  border-bottom: 1px solid var(--border);
+}
+
+.publication-side {
+  padding-top: 0.18rem;
+}
+
+.publication-venue-short {
+  margin-bottom: 0;
+  color: var(--highlight);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.publication-body {
+  min-width: 0;
+}
+
+.publication-title {
+  margin-bottom: 0.35rem;
+  font-size: 1.1rem;
+  line-height: 1.32;
+}
+
+.publication-authors {
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+}
+
+.publication-meta {
+  margin-bottom: 0.45rem;
+  font-size: 0.95rem;
+}
+
+.publication-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.publication-link {
+  color: var(--highlight);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.publication-link::after {
+  content: "/";
+  margin-left: 0.35rem;
+  color: var(--muted-soft);
+}
+
+.publication-link:last-child::after {
+  content: "";
+  margin-left: 0;
 }
 
 .venture-featured-grid,
@@ -972,6 +1020,15 @@ blockquote {
   .page-shell,
   .content-card {
     padding: 1.2rem;
+  }
+
+  .publication-entry {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .publication-side {
+    padding-top: 0;
   }
 
   .publication-head,
