@@ -34,26 +34,18 @@ description: Behavioral AI researcher and AI agent infrastructure builder at UVA
         {% include about.html %}
       </div>
       <div class="content-card">
-        <p class="section-kicker">Research</p>
-        <p>I study digital health, mobile sensing, and human-centered AI, with a focus on systems that can understand behavior in context and support interventions in everyday life.</p>
-        <p><a class="text-link" href="{{ '/research/' | relative_url }}">See publications and research areas</a></p>
+        <p class="section-kicker">Experience</p>
+        {% include experience.html %}
       </div>
       <div class="content-card">
-        <p class="section-kicker">AI Ventures</p>
-        <p>I also build agent infrastructure: long-running orchestration, tool-use workflows, and operator-facing systems for production-grade AI agents.</p>
-        <p><a class="text-link" href="{{ '/ai-ventures/' | relative_url }}">See projects and talks</a></p>
+        <p class="section-kicker">Selected Awards</p>
+        {% include awards.html %}
       </div>
     </div>
 
     <div class="col-lg-4">
       <div class="content-card">
         {% include news.html num=5 %}
-      </div>
-      <div class="content-card">
-        <p class="section-kicker">Background</p>
-        {% include experience.html %}
-        {% include education.html %}
-        {% include awards.html %}
       </div>
     </div>
   </div>
