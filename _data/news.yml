@@ -3,13 +3,18 @@
   show: true
   featured: true
 
+- date: "Oct 2025"
+  descr: "Received the **UVA Link Lab Distinguished Research Award**. [Award](https://engineering.virginia.edu/labs-groups/link-lab/useful-information/link-lab-awards#:~:text=Fall%202025%3A%20Zhiyuan%20Wang%20%2D%20%22Wearable%20AI%20for%20Mental%20Health%3A%20From%20Sensing%20to%20Context%2DAware%20Proactive%20Assistance%22)"
+  show: true
+  featured: true
+
 - date: "Sept 2025"
   descr: "Honored to receive **NSF-EMBS-Google NextGen Scholar Recognition** from **IEEE BHI 2025**."
   show: true
   featured: true
 
 - date: "May 2025"
-  descr: "One paper on stakeholder engagement in LLM health systems was accepted by **npj Health Systems**. [Paper](/research/#wang-npjhealth2025)"
+  descr: "One paper on stakeholder engagement in LLM health systems was accepted by **npj Health Systems**. [Link](https://www.nature.com/articles/s44401-025-00024-5)"
   show: true
   featured: true
 
@@ -19,7 +24,7 @@
   featured: true
 
 - date: "Apr 2025"
-  descr: "Exciting news: I received the **All-University Graduate Teaching Award** from the **University of Virginia**."
+  descr: "Exciting news: I received the **All-University Graduate Teaching Award** from the **University of Virginia**. [Award](https://provost.virginia.edu/teaching-awards)"
   show: true
   featured: true
 
@@ -33,16 +38,16 @@
   show: true
 
 - date: "Jun 2024"
-  descr: "One paper on evaluating palliative care clinical communication using wearables and NLP was accepted by **ACM CSCW**. [Paper](/research/#wang-cscw2024)"
+  descr: "One paper on evaluating palliative care clinical communication using wearables and NLP was accepted by **ACM CSCW**. [Arxiv](https://arxiv.org/abs/2407.08143)"
   show: true
 
 - date: "Apr 2024"
-  descr: "I was selected for **NSF Cyber-Physical System (CPS) Rising Stars 2024**."
+  descr: "I was selected for **NSF Cyber-Physical System (CPS) Rising Stars 2024**. [Web](https://risingstars.linklab.virginia.edu/2024/)"
   show: true
   featured: true
 
 - date: "Dec 2024"
-  descr: "One paper on palliative care communication assessment was accepted by **ACM HEALTH**. [Paper](/research/#wang-acmhealth2024)"
+  descr: "One paper on palliative care communication assessment was accepted by **ACM HEALTH**. [Link](https://arxiv.org/abs/2409.15188)"
   show: true
 
 - date: "Mar 2024"
@@ -50,19 +55,19 @@
   show: true
 
 - date: "Aug 2023"
-  descr: "One paper on quantitative analysis of privacy risks in digital phenotyping was accepted by **IEEE BSN**. [Paper](/research/#wang-bsn2023)"
+  descr: "One paper on quantitative analysis of privacy risks in digital phenotyping was accepted by **IEEE BSN**. [Online](https://ieeexplore.ieee.org/document/10331378)"
   show: true
 
 - date: "Jul 2023"
-  descr: "One paper on detecting socially anxious individuals' social contexts was accepted by **ACM IMWUT**. [Paper](/research/#wang-imwut2023)"
+  descr: "One paper on detecting socially anxious individuals' social contexts was accepted by **ACM IMWUT**. [Online](https://doi.org/10.1145/3610916)"
   show: true
 
 - date: "Apr 2023"
-  descr: "One paper on state anxiety detection using linguistic biomarkers was accepted by **IEEE EMBC**. [Paper](/research/#wang-embc2023)"
+  descr: "One paper on state anxiety detection using linguistic biomarkers was accepted by **IEEE EMBC**. [Arxiv](https://arxiv.org/abs/2304.09928)"
   show: true
 
 - date: "Feb 2023"
-  descr: "Check out a smartwatch prototype we designed for better patient-provider communication, featured on **UVA Engineering**, **UVA Today**, and **UVA Nursing**."
+  descr: "Check out a smartwatch prototype we designed for better patient-provider communication, featured on **UVA Engineering** [Engineering](https://www.engineering.virginia.edu/news-events/news/cognitive-assistant-your-doctors-smartwatch), **UVA Today** [Today](https://news.virginia.edu/content/watch-your-words), and **UVA Nursing** [Nursing](https://www.nursing.virginia.edu/news/lebaron-commsense/)."
   show: true
 
 - date: "Oct 2022"
@@ -70,9 +75,9 @@
   show: true
 
 - date: "Jul 2022"
-  descr: "Our paper on mobile sensing in COVID-19 was accepted by **SPJ Health Data Science**. [Paper](/research/#wang-healthdata2022)"
+  descr: "Our paper on mobile sensing in COVID-19 was accepted by **SPJ Health Data Science**. Featured on [AAAS](https://www.eurekalert.org/news-releases/965737), [Medical Press](https://medicalxpress.com/news/2022-09-mobile-covid-era.html), and [News Medical](https://www.news-medical.net/news/20220923/A-Review-On-Mobile-Sensing-In-The-COVID-19-Era.aspx)."
   show: true
 
 - date: "Feb 2022"
-  descr: "Our paper on mobile sensing for personalized medicine and population health was accepted by **IEEE Internet of Things Journal**. [Paper](/research/#wang-iotj2023)"
+  descr: "Our paper on mobile sensing for personalized medicine and population health was accepted by **IEEE Internet of Things Journal**. [Online](https://doi.org/10.1109/JIOT.2022.3161046)"
   show: true
