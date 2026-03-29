@@ -5,7 +5,7 @@ date: 2026-03-27
 description: "Notes from a March 27, 2026 AI agent share session at UVA."
 ---
 
-On **March 27, 2026**, I gave a lab share session on how I use AI agents in day-to-day research and engineering work.
+On **March 27, 2026**, I gave a lab share session on how I use AI agents in day-to-day life and work.
 
 The core argument was simple: the useful shift is not just "better chatbots." It is learning how to treat AI agents as an operational layer for real work. In practice, that means persistent memory, tool access, review loops, role separation, and interfaces that let humans stay in control.
 
