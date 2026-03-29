@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "AI Agents for Research Productivity"
+title: "UVA March 27 AI Agent Share Session"
 date: 2026-03-27
-description: "Notes from a March 2026 lab share session on using AI agents for research, coding, and day-to-day technical work."
+description: "Notes from a March 27, 2026 AI agent share session at UVA."
 ---
 
 On **March 27, 2026**, I gave a lab share session on how I use AI agents in day-to-day research and engineering work.
@@ -19,6 +19,6 @@ I also walked through examples from my own stack, including persistent memory, a
 
 If you want the full deck, it is available here:
 
-- [AI Agents for Research Productivity PDF]({{ '/ai-agents-for-research-productivity.pdf' | relative_url }})
+- [UVA March 27 AI Agent Share Session (PDF)]({{ '/ai-agents-for-research-productivity.pdf' | relative_url }})
 
 This talk sits at the intersection of my two main tracks: **behavioral AI research** and **AI agent infrastructure**. The former asks how intelligent systems can better understand people in context. The latter asks how we make those systems reliable enough to operate as software, not just demos.

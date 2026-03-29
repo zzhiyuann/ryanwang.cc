@@ -23,4 +23,4 @@ description: "Two venture directions: personal super intelligence and agentic AI
   <p>This is a systems problem, not just a prompting problem. The hard part is keeping agents stateful, composable, and operational over time, with interfaces that real developers can actually use.</p>
 </div>
 
-<p class="page-note">For a concrete public artifact from this side of my work, see the <a class="text-link" href="{{ '/ai-agents-for-research-productivity.pdf' | relative_url }}">March 2026 talk deck (PDF)</a>.</p>
+<p class="page-note">For a concrete public artifact from this side of my work, see the <a class="text-link" href="{{ '/ai-agents-for-research-productivity.pdf' | relative_url }}">UVA March 27 AI Agent Share Session (PDF)</a>.</p>
