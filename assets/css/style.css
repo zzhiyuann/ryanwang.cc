@@ -670,6 +670,7 @@ pre code {
 .fa-envelope,
 .fa-github,
 .fa-linkedin,
+.fa-video,
 .fa-twitter,
 .ai-google-scholar {
   padding: 5px;
@@ -679,6 +680,7 @@ pre code {
 .fa-envelope:hover,
 .fa-github:hover,
 .fa-linkedin:hover,
+.fa-video:hover,
 .fa-twitter:hover,
 .ai-google-scholar:hover {
   transform: translateY(-1px);
@@ -694,6 +696,10 @@ pre code {
 
 .fa-linkedin:hover {
   color: #0a66c2;
+}
+
+.fa-video:hover {
+  color: #2d8cff;
 }
 
 .fa-twitter:hover {
@@ -923,6 +929,7 @@ blockquote {
 .fa-envelope,
 .fa-github,
 .fa-linkedin,
+.fa-video,
 .fa-twitter,
 .ai-google-scholar {
   transition: color 0.2s ease;
@@ -931,6 +938,7 @@ blockquote {
 .fa-envelope:hover,
 .fa-github:hover,
 .fa-linkedin:hover,
+.fa-video:hover,
 .fa-twitter:hover,
 .ai-google-scholar:hover {
   transform: none;

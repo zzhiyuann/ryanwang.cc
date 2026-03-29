@@ -4,7 +4,7 @@ avatar: profile.jpg
 description: Ph.D. Candidate at UVA | Incoming Research Scientist at Meta Reality Labs
 tagline: Behavioral AI researcher and AI agent infrastructure builder
 school: "University of Virginia"
-email: "[hello@ryanwang.cc](mailto:hello@ryanwang.cc)"
+email: "[vmf9pr@virginia.edu](mailto:vmf9pr@virginia.edu)"
 url: https://ryanwang.cc
 githuburl: https://github.com/zzhiyuann/ryanwang.cc
 
@@ -28,7 +28,8 @@ handles:
   linkedin: zhiyuanw
 
 social:
-- {icon: 'envelope', type: 's', link: 'mailto:hello@ryanwang.cc'}
+- {icon: 'envelope', type: 's', link: 'mailto:vmf9pr@virginia.edu'}
 - {icon: 'github', type: 'b', link: 'https://github.com/zzhiyuann'}
 - {icon: 'linkedin', type: 'b', link: 'https://www.linkedin.com/in/zhiyuanw/'}
+- {icon: 'video', type: 's', link: 'https://virginia.zoom.us/my/zhiyuan.wang'}
 - {icon: 'google', type: 'b', link: 'https://scholar.google.com/citations?user=vQTSP18AAAAJ'}
