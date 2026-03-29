@@ -18,10 +18,6 @@ menu:
 docs:
 - name: 'Google Scholar'
   url: https://scholar.google.com/citations?user=vQTSP18AAAAJ
-- name: 'Site Source'
-  url: https://github.com/zzhiyuann/ryanwang.cc
-- name: 'UVA March 27 AI Agent Share Session (PDF)'
-  url: ai-agents-for-research-productivity.pdf
 
 handles:
   github: zzhiyuann
