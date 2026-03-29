@@ -1,30 +1,32 @@
 - date: "Jan 2026"
   descr: "One paper on affective experience sampling with digital diaries was conditionally accepted by **ACM CHI 2026**. [Paper](/research/#wang-chi2026)"
   show: true
+  featured: true
 
 - date: "Sept 2025"
   descr: "Honored to receive **NSF-EMBS-Google NextGen Scholar Recognition** from **IEEE BHI 2025**."
   show: true
+  featured: true
 
 - date: "May 2025"
   descr: "One paper on stakeholder engagement in LLM health systems was accepted by **npj Health Systems**. [Paper](/research/#wang-npjhealth2025)"
   show: true
+  featured: true
 
 - date: "May 2025"
   descr: "Joined **Meta Reality Labs Research** as a Multimodal Behavioral Research Scientist Intern."
   show: true
+  featured: true
 
 - date: "Apr 2025"
   descr: "Exciting news: I received the **All-University Graduate Teaching Award** from the **University of Virginia**."
   show: true
-
-- date: "Dec 2024"
-  descr: "One paper on palliative care communication assessment was accepted by **ACM HEALTH**. [Paper](/research/#wang-acmhealth2024)"
-  show: true
+  featured: true
 
 - date: "Sep 2024"
   descr: "Excited to announce that I was awarded the **UVA Sture G. Olsson Endowed Fellowship**."
   show: true
+  featured: true
 
 - date: "Jun 2024"
   descr: "One paper understanding social contexts using ambient audio was accepted by **ACII 2024**. [Paper](/research/#wang-acii2024)"
@@ -36,6 +38,11 @@
 
 - date: "Apr 2024"
   descr: "I was selected for **NSF Cyber-Physical System (CPS) Rising Stars 2024**."
+  show: true
+  featured: true
+
+- date: "Dec 2024"
+  descr: "One paper on palliative care communication assessment was accepted by **ACM HEALTH**. [Paper](/research/#wang-acmhealth2024)"
   show: true
 
 - date: "Mar 2024"
