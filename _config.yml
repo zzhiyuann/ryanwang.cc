@@ -1,0 +1,31 @@
+# Site Settings
+baseurl: ""
+url: "https://ryanwang.cc"
+title: "Zhiyuan Wang"
+description: "Behavioral AI researcher and AI agent infrastructure builder."
+livereload: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - CNAME
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:title.html
+plugins:
+  - jekyll-paginate
+
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    default_lang: html
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1

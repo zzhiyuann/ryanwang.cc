@@ -1,0 +1,46 @@
+- title: "AgentOS"
+  label: "Orchestration"
+  desc: "A persistent AI agent orchestration platform. Manages agent lifecycles, state, and coordination across distributed systems. Built for production-grade multi-agent workflows."
+  code: https://github.com/zzhiyuann/agentos
+  highlights:
+    - Persistent agent lifecycle and identity management
+    - Coordination patterns for multi-agent production workflows
+    - Infrastructure for long-running, stateful agent systems
+  featured: true
+  show: true
+
+- title: "Cortex"
+  label: "MCP Stack"
+  desc: "MCP (Model Context Protocol) infrastructure layer. A suite of 6 PyPI packages enabling structured tool-use and context management for AI agents."
+  code: https://github.com/zzhiyuann/cortex
+  highlights:
+    - Structured tool use and context plumbing for AI agents
+    - Reusable packages for memory, communication, and session flow
+    - Developer-facing foundations for MCP-native systems
+  featured: true
+  show: true
+
+- title: "State of AI Agents"
+  label: "Report"
+  desc: "An interactive research report exploring the current landscape of AI agent systems, architectures, and deployment patterns. Built as a living document with data-driven insights."
+  url: https://zzhiyuann.github.io/state-of-ai-agents/
+  code: https://github.com/zzhiyuann/state-of-ai-agents
+  show: true
+
+- title: "Mission Control"
+  label: "Dashboard"
+  desc: "A real-time dashboard for monitoring and managing AI agent teams. Provides visibility into agent state, task progress, and inter-agent communication."
+  code: https://github.com/zzhiyuann/mission-control
+  show: true
+
+- title: "ccinit"
+  label: "CLI"
+  desc: "CLI tool to auto-generate Claude Code configuration files. Bootstraps CLAUDE.md, .claudeignore, and project settings from existing codebases."
+  code: https://github.com/zzhiyuann/ccinit
+  show: true
+
+- title: "Claude Code Manager"
+  label: "TUI"
+  desc: "A terminal UI for managing multiple Claude Code sessions. Handles parallel agent orchestration with unified logging and status views."
+  code: https://github.com/zzhiyuann/claude-code-manager
+  show: false

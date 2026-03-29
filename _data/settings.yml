@@ -1,0 +1,34 @@
+title: Zhiyuan Wang
+author: Zhiyuan Wang
+avatar: profile.jpg
+description: Ph.D. Candidate at UVA | Incoming Research Scientist at Meta Reality Labs
+tagline: Behavioral AI researcher and AI agent infrastructure builder
+school: "University of Virginia"
+email: "[hello@ryanwang.cc](mailto:hello@ryanwang.cc)"
+url: https://ryanwang.cc
+githuburl: https://github.com/zzhiyuann/ryanwang.cc
+
+menu:
+- {name: 'Home', url: ''}
+- {name: 'Research', url: 'research/'}
+- {name: 'AI Ventures', url: 'ai-ventures/'}
+- {name: 'Blog', url: 'blog/'}
+- {name: 'Resources', dropdown: 'docs'}
+
+docs:
+- name: 'Google Scholar'
+  url: https://scholar.google.com/citations?user=vQTSP18AAAAJ
+- name: 'Site Source'
+  url: https://github.com/zzhiyuann/ryanwang.cc
+- name: 'AI Agents Talk'
+  url: ai-share-session-mar-27.html
+
+handles:
+  github: zzhiyuann
+  linkedin: zhiyuanw
+
+social:
+- {icon: 'envelope', type: 's', link: 'mailto:hello@ryanwang.cc'}
+- {icon: 'github', type: 'b', link: 'https://github.com/zzhiyuann'}
+- {icon: 'linkedin', type: 'b', link: 'https://www.linkedin.com/in/zhiyuanw/'}
+- {icon: 'google', type: 'b', link: 'https://scholar.google.com/citations?user=vQTSP18AAAAJ'}

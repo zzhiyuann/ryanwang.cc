@@ -1,0 +1,27 @@
+## Publications
+{:.titletext}
+Conference papers, journal articles, and more. See full list on [Google Scholar](https://scholar.google.com/citations?user=vQTSP18AAAAJ).
+{:.subtitletext}
+
+<div class="publication-list">
+{% for pub in site.data.papers %}
+  <article class="publication-card">
+    <div class="publication-head">
+      <h3 class="publication-title anchorItem" id="{{ pub.CITEKEY }}">{{ pub.TITLE }}</h3>
+      {% if pub.status %}<span class="pill-badge">{{ pub.status }}</span>{% endif %}
+    </div>
+    <p class="publication-meta">
+      {% if pub.ENTRYTYPE == 'inproceedings' %}In <em>{{ pub.booktitle }}</em>, {{ pub.month }} {{ pub.year }}.{% endif %}
+      {% if pub.ENTRYTYPE == 'article' %}<em>{{ pub.journal }}</em>, {{ pub.month }} {{ pub.year }}.{% endif %}
+    </p>
+    {% if pub.authors %}<p class="publication-authors">{{ pub.authors }}</p>{% endif %}
+    {% if pub.note and pub.note != "" %}<p class="publication-note">{{ pub.note }}</p>{% endif %}
+    {% if pub.pdf or pub.code %}
+    <div class="record-links">
+      {% if pub.pdf %}<a class="record-link" href="{{ pub.pdf }}" target="_blank" rel="noopener">PDF</a>{% endif %}
+      {% if pub.code %}<a class="record-link" href="{{ pub.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+    </div>
+    {% endif %}
+  </article>
+{% endfor %}
+</div>

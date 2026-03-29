@@ -1,0 +1,46 @@
+<head>
+  <meta charset="utf-8">
+  {% capture page_title %}{% if page.title and page.title != 'Home' %}{{ page.title }} | {{ site.data.settings.title }}{% else %}{{ site.data.settings.title }}{% endif %}{% endcapture %}
+  {% assign page_description = page.description | default: site.data.settings.description %}
+  {% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
+  {% assign social_image = '/assets/img/profile.jpg' | absolute_url %}
+
+  <title>{{ page_title | strip }}</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="{{ page_description }}">
+  <meta name="author" content="{{ site.data.settings.author }}">
+  <meta name="theme-color" content="#123f5f">
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ page_title | strip }}">
+  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ social_image }}">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page_title | strip }}">
+  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:image" content="{{ social_image }}">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+
+  <!-- Academicons (for Google Scholar) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Styles -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%96%B3%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+</head>

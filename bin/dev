@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+bundle exec jekyll serve --host 127.0.0.1 --port "${PORT:-4001}" "$@"

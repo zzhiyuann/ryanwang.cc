@@ -1,0 +1,19 @@
+<!-- contact info -->
+<div class="card shadow">
+  <img id="mypic" src="{{ '/assets/img/profile.jpg' | relative_url }}" class="border-0 card-img-top" alt="{{ site.data.settings.author }}">
+
+  <div class="card-body pb-0 text-center">
+    <p class="card-title mb-1"><strong>{{ site.data.settings.author }}</strong></p>
+    <p><small class="text-muted">{{ site.data.settings.description }}</small></p>
+
+    <div class="mt-2">
+    {% for item in site.data.settings.social -%}
+      {% if item.icon == 'google' %}
+        <a href="{{ item.link }}" target="_blank" rel="noopener"><i class="ai ai-google-scholar ai-lg" style="padding:5px; color:#444;" aria-hidden="true"></i></a>
+      {% else %}
+        <a href="{{ item.link }}" target="_blank" rel="noopener"><i class="fa{{ item.type }} fa-{{ item.icon }}" aria-hidden="true"></i></a>
+      {% endif %}
+    {%- endfor %}
+    </div>
+  </div>
+</div>

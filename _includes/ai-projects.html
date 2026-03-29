@@ -1,0 +1,50 @@
+## Projects
+
+Beyond my academic research, I build **AI agent infrastructure**: systems that make AI agents work reliably as production systems.
+
+<div class="venture-featured-grid">
+{% for project in site.data.ai_projects %}
+{% if project.show and project.featured %}
+  <article class="venture-card venture-card-featured">
+    <div class="venture-card-head">
+      <div>
+        <p class="venture-kicker">{{ project.label | default: 'Featured' }}</p>
+        <h3>{{ project.title }}</h3>
+      </div>
+      <div class="record-links">
+        {% if project.url %}<a class="record-link" href="{{ project.url }}" target="_blank" rel="noopener">Website</a>{% endif %}
+        {% if project.code %}<a class="record-link" href="{{ project.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+      </div>
+    </div>
+    <p class="venture-desc">{{ project.desc }}</p>
+    {% if project.highlights %}
+    <ul class="detail-list compact">
+      {% for item in project.highlights %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </article>
+{% endif %}
+{% endfor %}
+</div>
+
+<div class="venture-grid">
+{% for project in site.data.ai_projects %}
+{% if project.show and project.featured != true %}
+  <article class="venture-card">
+    <div class="venture-card-head">
+      <div>
+        <p class="venture-kicker">{{ project.label | default: 'Project' }}</p>
+        <h3>{{ project.title }}</h3>
+      </div>
+    </div>
+    <p class="venture-desc">{{ project.desc }}</p>
+    <div class="record-links">
+      {% if project.url %}<a class="record-link" href="{{ project.url }}" target="_blank" rel="noopener">Website</a>{% endif %}
+      {% if project.code %}<a class="record-link" href="{{ project.code }}" target="_blank" rel="noopener">Code</a>{% endif %}
+    </div>
+  </article>
+{% endif %}
+{% endfor %}
+</div>

@@ -1,0 +1,43 @@
+<nav class="nav navbar navbar-expand-md navbar-static-top navbar-light bg-white">
+
+    <a class="navbar-brand" href="{{ '/' | relative_url }}">{{ site.data.settings.title }}</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        {% for item in site.data.settings.menu %}
+            {% assign item_path = '/' %}
+            {% if item.url and item.url != '' %}
+              {% assign item_path = '/' | append: item.url %}
+            {% endif %}
+            {% assign is_active = false %}
+            {% if item_path == '/' and page.url == '/' %}
+              {% assign is_active = true %}
+            {% elsif item_path != '/' and page.url contains item_path %}
+              {% assign is_active = true %}
+            {% endif %}
+            {% if item.dropdown == 'docs' and site.data.settings.docs.size > 0 %}
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ item.name }}</a>
+              <div class="dropdown-menu">
+                {% for d in site.data.settings.docs %}
+                {% if d.url contains '://' %}
+                <a class="dropdown-item" href="{{ d.url }}" target="_blank" rel="noopener">{{ d.name }}</a>
+                {% else %}
+                <a class="dropdown-item" href="{{ d.url | prepend: '/' | relative_url }}">{{ d.name }}</a>
+                {% endif %}
+                {% endfor %}
+              </div>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link{% if is_active %} active{% endif %}" href="{{ item_path | relative_url }}">{{ item.name }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,103 @@
+# Publications
+
+- CITEKEY: wang-chi2026
+  ENTRYTYPE: inproceedings
+  TITLE: "Inferring Affect and Intervention Opportunities for Cancer Survivors from Digital Diaries with Context-Aware LLMs"
+  authors: "Zhiyuan Wang, Katharine E. Daniel, Laura E. Barnes, Philip Chow"
+  booktitle: "ACM CHI Conference on Human Factors in Computing Systems"
+  month: May
+  year: 2026
+  status: "Conditionally Accepted (25% acceptance rate)"
+  note: ""
+
+- CITEKEY: wang-cscw2024
+  ENTRYTYPE: inproceedings
+  TITLE: "Commsense: A Wearable Sensing Computational Framework for Evaluating Patient-Clinician Interactions"
+  authors: "Zhiyuan Wang, Nusayer Hassan, Virginia LeBaron, Tabor Flickinger, David Ling, James Edwards, Congyu Wu, Mehdi Boukhechba, Laura E. Barnes"
+  booktitle: "Proceedings of the ACM on Human-Computer Interaction (CSCW)"
+  month: November
+  year: 2024
+  status: "26% acceptance rate"
+  note: ""
+
+- CITEKEY: wang-imwut2023
+  ENTRYTYPE: inproceedings
+  TITLE: "Detecting Social Contexts from Mobile Sensing Indicators in Virtual Interactions with Socially Anxious Individuals"
+  authors: "Zhiyuan Wang*, Maria A. Larrazabal*, Mark Rucker, Emma R. Toner, Katharine E. Daniel, Shashwat Kumar, Mehdi Boukhechba, Bethany A. Teachman, Laura E. Barnes"
+  booktitle: "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (IMWUT)"
+  month: September
+  year: 2023
+  status: "24% acceptance rate"
+  note: ""
+
+- CITEKEY: wang-npjhealth2025
+  ENTRYTYPE: article
+  TITLE: "Stakeholder-Centric Participation in Large Language Models Enhanced Health Systems"
+  authors: "Zhiyuan Wang et al."
+  journal: "npj Health Systems"
+  month: January
+  year: 2025
+  note: ""
+
+- CITEKEY: wang-acii2024
+  ENTRYTYPE: inproceedings
+  TITLE: "Audioinsight: Detecting Social Contexts Relevant to Social Anxiety from Speech"
+  authors: "Varun Reddy, Zhiyuan Wang, Laura E. Barnes"
+  booktitle: "International Conference on Affective Computing and Intelligent Interaction (ACII)"
+  month: September
+  year: 2024
+  note: "Mentored undergraduate research"
+
+- CITEKEY: wang-acmhealth2024
+  ENTRYTYPE: inproceedings
+  TITLE: "PALLM: Evaluating and Enhancing Palliative Care Conversations with Large Language Models"
+  authors: "Zhiyuan Wang et al."
+  booktitle: "ACM HEALTH"
+  month: October
+  year: 2024
+  note: ""
+
+- CITEKEY: wang-chilbw2024
+  ENTRYTYPE: inproceedings
+  TITLE: "Rapport matters: Enhancing HIV mHealth Communication through Linguistic Analysis and LLMs"
+  authors: "Zhiyuan Wang et al."
+  booktitle: "ACM CHI Late-Breaking Work"
+  month: May
+  year: 2024
+  note: ""
+
+- CITEKEY: wang-iotj2023
+  ENTRYTYPE: article
+  TITLE: "From Personalized Medicine to Population Health: A Survey of mHealth Sensing Techniques"
+  authors: "Zhiyuan Wang et al."
+  journal: "IEEE Internet of Things Journal"
+  month: September
+  year: 2023
+  note: "Featured on AAAS, Medical Xpress, News Medical"
+
+- CITEKEY: wang-bsn2023
+  ENTRYTYPE: inproceedings
+  TITLE: "Quantitative Analysis of Privacy Risks in Digital Phenotyping"
+  authors: "Zhiyuan Wang et al."
+  booktitle: "IEEE BSN"
+  month: October
+  year: 2023
+  note: ""
+
+- CITEKEY: wang-embc2023
+  ENTRYTYPE: inproceedings
+  TITLE: "State Anxiety Detection Using Linguistic Biomarkers"
+  authors: "Zhiyuan Wang et al."
+  booktitle: "IEEE EMBC"
+  month: July
+  year: 2023
+  note: ""
+
+- CITEKEY: wang-healthdata2022
+  ENTRYTYPE: article
+  TITLE: "Mobile Sensing in the COVID-19 Era"
+  authors: "Zhiyuan Wang et al."
+  journal: "SPJ Health Data Science"
+  month: March
+  year: 2022
+  note: "Featured on AAAS EurekAlert!"
