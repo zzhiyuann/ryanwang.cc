@@ -6,70 +6,49 @@ description: Behavioral AI researcher and AI agent infrastructure builder at UVA
 ---
 
 <section class="home-hero">
-  <div class="row align-items-center">
-    <div class="col-lg-7">
-      <p class="hero-eyebrow">Behavioral AI + Agent Systems</p>
-      <h1 class="hero-title">I build ubiquitous sensing systems for health, and the infrastructure that makes AI agents reliable in production.</h1>
-      <p class="hero-copy">I am a Ph.D. Candidate at the University of Virginia working across digital health, mobile sensing, and human-centered AI. Starting May 2026, I will join Meta Reality Labs Research to work on behavioral AI and proactive agents for next-generation personal wearables.</p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="{{ '/research/' | relative_url }}">View Research</a>
-        <a class="btn btn-outline-primary btn-lg" href="{{ '/ai-ventures/' | relative_url }}">Explore AI Ventures</a>
-      </div>
-      <div class="hero-pills">
-        <span>UVA Ph.D. Candidate</span>
-        <span>Incoming @ Meta Reality Labs</span>
-        <span>Digital Health + AI Agents</span>
-      </div>
+  <div class="row">
+    <div class="col-lg-8">
+      <p class="hero-eyebrow">Behavioral AI, Digital Health, and Agent Systems</p>
+      <h1 class="hero-title">Zhiyuan Wang</h1>
+      <p class="hero-copy">I am a Ph.D. Candidate at the University of Virginia, where I work on ubiquitous sensing, behavioral AI, and mobile systems for health.</p>
+      <p class="hero-copy">Alongside my academic work, I build AI agent infrastructure: orchestration, tool use, and developer systems for reliable long-running agents. Starting in May 2026, I will join Meta Reality Labs Research as a Research Scientist.</p>
+      <p class="home-links">
+        <a href="{{ '/research/' | relative_url }}">Research</a>
+        <a href="{{ '/ai-ventures/' | relative_url }}">AI Ventures</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+        <a href="{{ '/news/' | relative_url }}">News</a>
+      </p>
     </div>
 
-    <div class="col-lg-5 mt-4 mt-lg-0">
+    <div class="col-lg-4 mt-4 mt-lg-0">
       {% include contact.html %}
     </div>
   </div>
 </section>
 
 <section class="home-section">
-  <div class="section-heading">
-    <p class="section-kicker">Overview</p>
-    <h2 class="section-title">Two tracks, one systems mindset.</h2>
-    <p class="section-subtitle">My academic work focuses on behavioral AI and ubiquitous computing for health. In parallel, I build orchestration, tooling, and developer infrastructure for production-grade AI agents.</p>
-  </div>
-
-  <div class="feature-grid">
-    <a class="feature-card" href="{{ '/research/' | relative_url }}">
-      <span class="feature-label">Research</span>
-      <h3>Digital health, multimodal sensing, and human-centered AI.</h3>
-      <p>Peer-reviewed work spanning mobile sensing, affect inference, intervention systems, and clinical collaboration.</p>
-    </a>
-
-    <a class="feature-card" href="{{ '/ai-ventures/' | relative_url }}">
-      <span class="feature-label">AI Ventures</span>
-      <h3>Agent infrastructure for persistent, production-grade systems.</h3>
-      <p>Projects across orchestration, tool-use protocols, dashboards, and developer workflows for AI-native teams.</p>
-    </a>
-
-    <a class="feature-card" href="{{ '/news/' | relative_url }}">
-      <span class="feature-label">Latest</span>
-      <h3>Recent milestones, awards, and publications.</h3>
-      <p>Follow current updates from CHI 2026, Meta Reality Labs Research, and ongoing collaborative work.</p>
-    </a>
-  </div>
-</section>
-
-<section class="home-section">
   <div class="row">
-    <div class="col-lg-4 mb-4 mb-lg-0">
-      <div class="content-card">
-        {% include news.html num=5 %}
-      </div>
-    </div>
-
-    <div class="col-lg-8">
+    <div class="col-lg-8 mb-4 mb-lg-0">
       <div class="content-card">
         <p class="section-kicker">About</p>
         {% include about.html %}
       </div>
+      <div class="content-card">
+        <p class="section-kicker">Research</p>
+        <p>I study digital health, mobile sensing, and human-centered AI, with a focus on systems that can understand behavior in context and support interventions in everyday life.</p>
+        <p><a class="text-link" href="{{ '/research/' | relative_url }}">See publications and research areas</a></p>
+      </div>
+      <div class="content-card">
+        <p class="section-kicker">AI Ventures</p>
+        <p>I also build agent infrastructure: long-running orchestration, tool-use workflows, and operator-facing systems for production-grade AI agents.</p>
+        <p><a class="text-link" href="{{ '/ai-ventures/' | relative_url }}">See projects and talks</a></p>
+      </div>
+    </div>
 
+    <div class="col-lg-4">
+      <div class="content-card">
+        {% include news.html num=5 %}
+      </div>
       <div class="content-card">
         <p class="section-kicker">Background</p>
         {% include experience.html %}
