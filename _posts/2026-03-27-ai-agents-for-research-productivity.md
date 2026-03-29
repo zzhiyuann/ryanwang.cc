@@ -20,5 +20,6 @@ I also walked through examples from my own stack, including persistent memory, a
 If you want the full deck, it is available here:
 
 - [AI Agents for Research Productivity slides]({{ '/ai-share-session-mar-27.html' | relative_url }})
+- [AI Agents for Research Productivity PDF]({{ '/ai-agents-for-research-productivity.pdf' | relative_url }})
 
 This talk sits at the intersection of my two main tracks: **behavioral AI research** and **AI agent infrastructure**. The former asks how intelligent systems can better understand people in context. The latter asks how we make those systems reliable enough to operate as software, not just demos.
