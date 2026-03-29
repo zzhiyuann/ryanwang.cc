@@ -844,6 +844,28 @@ blockquote {
   content: "";
 }
 
+.home-hero .card {
+  max-width: 410px;
+  margin-left: auto;
+}
+
+.home-hero .card-img-top {
+  aspect-ratio: 4 / 3.55;
+  object-position: center 24%;
+}
+
+.home-hero .card-body {
+  padding: 1rem 1rem 0.85rem;
+}
+
+.home-hero .card-title {
+  margin-bottom: 0.3rem;
+}
+
+.home-hero .card-body p {
+  margin-bottom: 0.65rem;
+}
+
 .btn,
 .pill-badge,
 .record-link,
