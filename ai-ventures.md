@@ -44,8 +44,7 @@ description: Open-source projects and systems for AI agent orchestration, tool u
       <li>An interactive report on the state of AI agent systems.</li>
       <li>A public talk on how AI agents can improve research productivity.</li>
     </ul>
-    <p><a class="text-link" href="{{ '/ai-share-session-mar-27.html' | relative_url }}">View the March 2026 slide deck</a></p>
-    <p><a class="text-link" href="{{ '/ai-agents-for-research-productivity.pdf' | relative_url }}">Download the PDF version</a></p>
+    <p><a class="text-link" href="{{ '/ai-agents-for-research-productivity.pdf' | relative_url }}">Download the March 2026 talk as PDF</a></p>
   </div>
 </div>
 
