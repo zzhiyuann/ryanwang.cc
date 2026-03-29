@@ -1,43 +1,71 @@
-- descr: "Excited to announce that I will be joining **Meta Reality Labs Research** this May as a Research Scientist, working on **Behavioral AI and Proactive Agents** for next-generation personal wearables."
-  date: March 2026
+- date: "Jan 2026"
+  descr: "One paper on affective experience sampling with digital diaries was conditionally accepted by **ACM CHI 2026**. [Paper](/research/#wang-chi2026)"
   show: true
 
-- descr: "Our paper *Inferring Affect and Intervention Opportunities for Cancer Survivors from Digital Diaries with Context-Aware LLMs* has been conditionally accepted to **ACM CHI 2026** (25% acceptance rate)!"
-  date: January 2026
+- date: "Sept 2025"
+  descr: "Honored to receive **NSF-EMBS-Google NextGen Scholar Recognition** from **IEEE BHI 2025**."
   show: true
 
-- descr: "Received the **UVA Link Lab Distinguished Research Award** (2025)."
-  date: October 2025
+- date: "May 2025"
+  descr: "One paper on stakeholder engagement in LLM health systems was accepted by **npj Health Systems**. [Paper](/research/#wang-npjhealth2025)"
   show: true
 
-- descr: "Selected as an **NSF-EMBS-Google NextGen Scholar** in Biomedical Informatics (2025)."
-  date: September 2025
+- date: "May 2025"
+  descr: "Joined **Meta Reality Labs Research** as a Multimodal Behavioral Research Scientist Intern."
   show: true
 
-- descr: "Received the **UVA All-University Graduate Teaching Award** (2025)."
-  date: June 2025
+- date: "Apr 2025"
+  descr: "Exciting news: I received the **All-University Graduate Teaching Award** from the **University of Virginia**."
   show: true
 
-- descr: "Started as a Multimodal Behavioral AI Research Scientist Intern at **Meta Reality Labs Research**, Redmond, WA."
-  date: May 2025
+- date: "Dec 2024"
+  descr: "One paper on palliative care communication assessment was accepted by **ACM HEALTH**. [Paper](/research/#wang-acmhealth2024)"
   show: true
 
-- descr: "Selected as an **NSF Cyber-Physical System (CPS) Rising Star** (2024)."
-  date: October 2024
+- date: "Sep 2024"
+  descr: "Excited to announce that I was awarded the **UVA Sture G. Olsson Endowed Fellowship**."
   show: true
 
-- descr: "Awarded the **UVA Sture G. Olsson Endowed Fellowship** ($12,000)."
-  date: September 2024
+- date: "Jun 2024"
+  descr: "One paper understanding social contexts using ambient audio was accepted by **ACII 2024**. [Paper](/research/#wang-acii2024)"
   show: true
 
-- descr: "Our paper *Commsense: A Wearable Sensing Computational Framework* accepted to **ACM CSCW 2024** (26% acceptance rate)."
-  date: May 2024
+- date: "Jun 2024"
+  descr: "One paper on evaluating palliative care clinical communication using wearables and NLP was accepted by **ACM CSCW**. [Paper](/research/#wang-cscw2024)"
   show: true
 
-- descr: "Started as an AI/ML Data Scientist Intern at **Johnson & Johnson Innovative Medicine**."
-  date: May 2024
+- date: "Apr 2024"
+  descr: "I was selected for **NSF Cyber-Physical System (CPS) Rising Stars 2024**."
   show: true
 
-- descr: "Our paper *Detecting Social Contexts from Mobile Sensing Indicators* published in **ACM IMWUT 2023** (24% acceptance rate)."
-  date: September 2023
+- date: "Mar 2024"
+  descr: "This summer, I would be working as a digital health research scientist intern at **Johnson & Johnson Innovative Medicine**."
+  show: true
+
+- date: "Aug 2023"
+  descr: "One paper on quantitative analysis of privacy risks in digital phenotyping was accepted by **IEEE BSN**. [Paper](/research/#wang-bsn2023)"
+  show: true
+
+- date: "Jul 2023"
+  descr: "One paper on detecting socially anxious individuals' social contexts was accepted by **ACM IMWUT**. [Paper](/research/#wang-imwut2023)"
+  show: true
+
+- date: "Apr 2023"
+  descr: "One paper on state anxiety detection using linguistic biomarkers was accepted by **IEEE EMBC**. [Paper](/research/#wang-embc2023)"
+  show: true
+
+- date: "Feb 2023"
+  descr: "Check out a smartwatch prototype we designed for better patient-provider communication, featured on **UVA Engineering**, **UVA Today**, and **UVA Nursing**."
+  show: true
+
+- date: "Oct 2022"
+  descr: "Honored to give a student presentation on personalized ML for digital mental health at the **NSF-NIH SCH PI Meeting**."
+  show: true
+
+- date: "Jul 2022"
+  descr: "Our paper on mobile sensing in COVID-19 was accepted by **SPJ Health Data Science**. [Paper](/research/#wang-healthdata2022)"
+  show: true
+
+- date: "Feb 2022"
+  descr: "Our paper on mobile sensing for personalized medicine and population health was accepted by **IEEE Internet of Things Journal**. [Paper](/research/#wang-iotj2023)"
   show: true
