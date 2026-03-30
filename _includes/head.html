@@ -4,26 +4,29 @@
   {% assign page_description = page.description | default: site.data.settings.description %}
   {% assign canonical_url = page.url | replace: 'index.html', '' | absolute_url %}
   {% assign social_image = '/assets/img/profile.jpg' | absolute_url %}
+  {% assign page_title_safe = page_title | strip | escape %}
+  {% assign page_description_safe = page_description | escape %}
+  {% assign author_safe = site.data.settings.author | escape %}
 
   <title>{{ page_title | strip }}</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="{{ page_description }}">
-  <meta name="author" content="{{ site.data.settings.author }}">
+  <meta name="description" content="{{ page_description_safe }}">
+  <meta name="author" content="{{ author_safe }}">
   <meta name="theme-color" content="#123b7a">
   <link rel="canonical" href="{{ canonical_url }}">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="{{ page_title | strip }}">
-  <meta property="og:description" content="{{ page_description }}">
+  <meta property="og:title" content="{{ page_title_safe }}">
+  <meta property="og:description" content="{{ page_description_safe }}">
   <meta property="og:url" content="{{ canonical_url }}">
   <meta property="og:type" content="website">
   <meta property="og:image" content="{{ social_image }}">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{{ page_title | strip }}">
-  <meta name="twitter:description" content="{{ page_description }}">
+  <meta name="twitter:title" content="{{ page_title_safe }}">
+  <meta name="twitter:description" content="{{ page_description_safe }}">
   <meta name="twitter:image" content="{{ social_image }}">
 
   <!-- Fonts -->
