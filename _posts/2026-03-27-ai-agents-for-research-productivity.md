@@ -22,4 +22,4 @@ If there was a single theme across the whole session, it was that I am less inte
 
 If you want the full deck, it is available here:
 
-- [UVA March 27 AI Agent Share Session (PDF)]({{ '/ai-agents-for-research-productivity.pdf' | relative_url }})
+- [UVA March 27 AI Agent Share Session (PDF)]({{ '/blog/lab-ai-share-session.pdf' | relative_url }})
