@@ -3,6 +3,7 @@ layout: post
 title: "UVA March 27 AI Agent Share Session"
 date: 2026-03-27
 description: "Notes from a March 27, 2026 UVA share session on Claude Code, RyanHub, and AgentOS."
+permalink: /blog/lab-ai-share-session.html
 ---
 
 On **March 27, 2026**, I gave a lab share session on how I use AI agents in day-to-day life and work.
