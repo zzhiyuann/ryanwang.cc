@@ -1,3 +1,8 @@
+- date: "Apr 2026"
+  descr: "I successfully defended my dissertation: *Contextual AI for Mental Health: From Behavioral Sensing to Agentic Proactive Assistance*."
+  show: true
+  featured: true
+
 - date: "Jan 2026"
   descr: "One paper on affective experience sampling with digital diaries was conditionally accepted by **ACM CHI 2026**. [Paper](/research/#wang-chi2026)"
   show: true
