@@ -14,6 +14,9 @@ description: "Two venture directions: personal super intelligence and agentic AI
   <h3>Personal AI systems that become coherent, persistent instruments for one person's life.</h3>
   <p>I am interested in AI systems that do more than answer questions in chat. The longer-term direction is a personal computing environment where generated tools, interfaces, and agents share state over time and become usable instruments for reflection, planning, sensing, and day-to-day action.</p>
   <p>This sits at the intersection of ubiquitous computing, personal informatics, context-aware systems, and AI-generated software. The goal is not a generic assistant, but a deeply personal system that can accumulate context, stay coherent across modules, and become more useful as it lives with the user.</p>
+  <p class="pub-entry"><strong>Personal Super Intelligence Interface</strong><br>
+  A position paper articulating what personal super intelligence means as a design direction — and what it takes to build AI systems that function as coherent, persistent instruments for one person's life.<br>
+  <a href="https://arxiv.org/abs/2604.08529v1" target="_blank">arXiv:2604.08529</a></p>
 </div>
 
 <div class="content-card">
