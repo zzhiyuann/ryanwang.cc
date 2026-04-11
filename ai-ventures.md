@@ -14,9 +14,15 @@ description: "Two venture directions: personal super intelligence and agentic AI
   <h3>Personal AI systems that become coherent, persistent instruments for one person's life.</h3>
   <p>I am interested in AI systems that do more than answer questions in chat. The longer-term direction is a personal computing environment where generated tools, interfaces, and agents share state over time and become usable instruments for reflection, planning, sensing, and day-to-day action.</p>
   <p>This sits at the intersection of ubiquitous computing, personal informatics, context-aware systems, and AI-generated software. The goal is not a generic assistant, but a deeply personal system that can accumulate context, stay coherent across modules, and become more useful as it lives with the user.</p>
-  <p class="pub-entry"><a href="https://arxiv.org/abs/2604.08529v1" target="_blank"><strong>PSI: Shared State as the Missing Layer for Coherent AI-Generated Instruments in Personal AI Agents</strong></a><br>
-  A shared-state architecture that turns independently generated AI modules into coherent instruments through a personal-context bus. Demonstrated across 14 modules in a three-week autobiographical deployment, covering behavioral sensing, health, scheduling, and everyday automation.<br>
-  Zhiyuan Wang, Erzhen Hu, Mark Rucker, Laura Barnes. 2025.</p>
+  <div class="pub-entry">
+    <p class="publication-venue-short">arXiv 2025</p>
+    <h4 class="publication-title">PSI: Shared State as the Missing Layer for Coherent AI-Generated Instruments in Personal AI Agents</h4>
+    <p class="publication-authors">Zhiyuan Wang, Erzhen Hu, Mark Rucker, Laura Barnes</p>
+    <p class="publication-meta"><em>A shared-state architecture that turns independently generated AI modules into coherent instruments through a personal-context bus. Demonstrated across 14 modules in a three-week autobiographical deployment.</em></p>
+    <div class="publication-links">
+      <a class="publication-link" href="https://arxiv.org/abs/2604.08529v1" target="_blank" rel="noopener">Paper</a>
+    </div>
+  </div>
 </div>
 
 <div class="content-card">

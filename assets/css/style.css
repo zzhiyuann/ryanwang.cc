@@ -1044,9 +1044,26 @@ blockquote {
 
 /* Publication entry within content cards */
 .pub-entry {
-  margin-top: 1.2rem;
-  padding-top: 1rem;
+  margin-top: 1.4rem;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--border);
-  font-size: 0.92rem;
-  line-height: 1.55;
+}
+
+.pub-entry .publication-title {
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+}
+
+.pub-entry .publication-authors {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.pub-entry .publication-meta {
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+}
+
+.pub-entry .publication-links {
+  margin-top: 0.15rem;
 }
