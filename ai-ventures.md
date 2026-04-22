@@ -13,7 +13,7 @@ description: "Two venture directions: personal super intelligence and agentic AI
   <p class="section-kicker">Personal Super Intelligence</p>
   <h3>Personal AI systems that become coherent, persistent instruments for one person's life.</h3>
   <p>I am interested in AI systems that do more than answer questions in chat. The longer-term direction is a personal computing environment where generated tools, interfaces, and agents share state over time and become usable instruments for reflection, planning, sensing, and day-to-day action.</p>
-  <p>This sits at the intersection of ubiquitous computing, personal informatics, context-aware systems, and AI-generated software. The goal is not a generic assistant, but a deeply personal system that can accumulate context, stay coherent across modules, and become more useful as it lives with the user.</p>
+  <p>This sits at the intersection of intent modeling, goal tracking, and AI-generated software. The goal is not a generic assistant, but a system that lives with you long enough to know what you're pursuing — one that turns scattered intentions into coherent goals, and coherent goals into a visible trail of things done in this AI age.</p>
   <div class="pub-entry">
     <p class="publication-venue-short">Check out our new arXiv!</p>
     <h4 class="publication-title">PSI: Shared State as the Missing Layer for Coherent AI-Generated Instruments in Personal AI Agents</h4>
