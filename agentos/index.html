@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AgentOS — Linear-native control plane for AI agent teams</title>
+<meta name="description" content="Open-source operating system for AI-native companies. Persistent agent identities, real memory, Linear as the control plane. MIT licensed.">
+<link rel="canonical" href="https://ryanwang.cc/agentos/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AgentOS — an operating system for AI-native companies">
+<meta property="og:description" content="Turn Linear into the control plane for a team of AI agents — with persistent identity, real memory, and authority to work. Open source, MIT.">
+<meta property="og:url" content="https://ryanwang.cc/agentos/">
+<meta property="og:image" content="https://ryanwang.cc/agentos/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AgentOS: an operating system for AI-native companies. Open source, MIT.">
+<meta property="og:site_name" content="AgentOS">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AgentOS — an operating system for AI-native companies">
+<meta name="twitter:description" content="Persistent agent identity, real memory, Linear as the control plane. Open source, MIT.">
+<meta name="twitter:image" content="https://ryanwang.cc/agentos/assets/og-image.png">
+<meta name="twitter:image:alt" content="AgentOS: an operating system for AI-native companies. Open source, MIT.">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230a0a0f'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='56' font-weight='700' fill='%23818cf8' text-anchor='middle'%3E%E2%9F%A1%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*,*::before,*::after{box-sizing:border-box}
+:root{
+  --bg:#0a0a0f;
+  --bg-elev:#11121a;
+  --fg:#e6e7ee;
+  --fg-dim:#a0a3b1;
+  --fg-muted:#6e7180;
+  --border:rgba(255,255,255,.08);
+  --border-strong:rgba(255,255,255,.14);
+  --indigo:#818cf8;
+  --emerald:#34d399;
+  --pink:#f472b6;
+  --amber:#fbbf24;
+  --maxw:1100px;
+}
+html,body{margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--fg);
+  font:400 16px/1.6 "Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+.bg-orbs{position:fixed;inset:0;pointer-events:none;z-index:0;overflow:hidden}
+.bg-orbs::before,.bg-orbs::after{content:"";position:absolute;border-radius:50%;filter:blur(120px);opacity:.35}
+.bg-orbs::before{width:520px;height:520px;background:var(--indigo);top:-160px;left:-120px}
+.bg-orbs::after{width:480px;height:480px;background:var(--pink);bottom:-160px;right:-120px;opacity:.22}
+.bg-grid{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.18;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 75%)}
+
+main,header,footer,section{position:relative;z-index:1}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* Header */
+.site-header{padding:24px 0;border-bottom:1px solid var(--border)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:inline-flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-weight:600;letter-spacing:-.01em}
+.brand-mark{width:28px;height:28px;border-radius:7px;background:linear-gradient(135deg,var(--indigo),var(--pink));display:inline-flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace;font-weight:700;color:#0a0a0f}
+.nav{display:flex;align-items:center;gap:22px;font-size:14px}
+.nav a{color:var(--fg-dim);text-decoration:none}
+.nav a:hover{color:var(--fg)}
+.nav .gh-cta{color:var(--fg);border:1px solid var(--border-strong);padding:8px 14px;border-radius:8px}
+.nav .gh-cta:hover{background:rgba(255,255,255,.04)}
+@media (max-width:640px){.nav .nav-link{display:none}}
+
+/* Hero */
+.hero{padding:72px 0 56px}
+.eyebrow{display:inline-block;color:var(--fg-muted);font-size:13px;letter-spacing:.04em;font-weight:500;margin-bottom:18px;border:1px solid var(--border);padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.02)}
+.eyebrow .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--emerald);margin-right:8px;vertical-align:middle}
+h1.hero-title{
+  font-size:clamp(36px,5.6vw,64px);
+  line-height:1.05;
+  letter-spacing:-.02em;
+  font-weight:700;
+  margin:0 0 18px;
+  max-width:18ch;
+}
+h1.hero-title em{font-style:normal;background:linear-gradient(120deg,var(--indigo),var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:clamp(16px,2.1vw,20px);color:var(--fg-dim);max-width:62ch;margin:0 0 28px;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.cmd-chip{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#000;border:1px solid var(--border-strong);
+  padding:14px 18px;border-radius:10px;
+  font-family:"JetBrains Mono",monospace;font-size:14.5px;
+  color:var(--fg);cursor:pointer;
+  transition:border-color .15s ease,background .15s ease;
+}
+.cmd-chip:hover{border-color:var(--indigo);background:#04040a}
+.cmd-chip .prompt{color:var(--emerald)}
+.cmd-chip .copy-icon{color:var(--fg-muted);font-size:12px;font-family:"Inter",sans-serif;margin-left:4px}
+.cmd-chip.copied .copy-icon{color:var(--emerald)}
+.btn-secondary{color:var(--fg-dim);text-decoration:none;font-size:14.5px;padding:8px 0;border-bottom:1px dashed var(--border-strong)}
+.btn-secondary:hover{color:var(--fg);border-bottom-color:var(--indigo)}
+.hero-supporting{margin-top:32px;color:var(--fg-muted);font-size:14px}
+
+.hero-visual{
+  margin-top:48px;
+  background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));
+  border:1px solid var(--border-strong);
+  border-radius:14px;padding:18px;
+  font-family:"JetBrains Mono",monospace;font-size:13px;
+  position:relative;overflow:hidden;
+}
+.hero-visual::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% -20%,rgba(129,140,248,.18),transparent 50%);pointer-events:none}
+.terminal-bar{display:flex;gap:6px;margin-bottom:14px}
+.terminal-bar span{width:11px;height:11px;border-radius:50%;background:#3a3b48}
+.terminal-bar span:nth-child(1){background:#ff5f57}
+.terminal-bar span:nth-child(2){background:#febc2e}
+.terminal-bar span:nth-child(3){background:#28c840}
+.term-line{padding:3px 0;color:var(--fg-dim)}
+.term-line .role{color:var(--indigo);font-weight:600}
+.term-line .role-cto{color:var(--amber)}
+.term-line .role-cpo{color:var(--pink)}
+.term-line .role-eng{color:var(--emerald)}
+.term-line .ts{color:var(--fg-muted)}
+.term-line .system{color:var(--fg-muted);font-style:italic}
+.term-cmd{color:var(--fg);margin-top:8px}
+.term-cmd .prompt{color:var(--emerald)}
+
+/* Section base */
+section.block{padding:72px 0}
+section.block + section.block{border-top:1px solid var(--border)}
+.kicker{color:var(--indigo);font-family:"JetBrains Mono",monospace;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px;font-weight:600}
+h2.title{font-size:clamp(26px,3.6vw,36px);line-height:1.15;letter-spacing:-.015em;font-weight:700;margin:0 0 18px;max-width:24ch}
+.lede{color:var(--fg-dim);max-width:62ch;font-size:17px;margin:0 0 28px}
+
+/* Install */
+.install-grid{display:grid;gap:14px}
+.install-cmd{
+  background:#000;border:1px solid var(--border-strong);border-radius:10px;
+  padding:14px 18px;font-family:"JetBrains Mono",monospace;font-size:14px;
+  color:var(--fg);overflow-x:auto;cursor:pointer;
+  transition:border-color .15s ease;
+}
+.install-cmd:hover{border-color:var(--indigo)}
+.install-cmd.muted{font-size:13px;color:var(--fg-dim);background:#06060c}
+.install-cmd .prompt{color:var(--emerald)}
+.install-cmd .label{display:block;color:var(--fg-muted);font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:6px;font-family:"Inter",sans-serif}
+.platform-note{color:var(--fg-muted);font-size:13.5px;margin-top:14px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px}
+@media (max-width:880px){.cards{grid-template-columns:1fr}}
+.card{
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
+  border:1px solid var(--border);
+  border-radius:14px;padding:24px;
+  backdrop-filter:blur(8px);
+  position:relative;
+  transition:border-color .2s ease,transform .2s ease;
+}
+.card:hover{border-color:var(--border-strong);transform:translateY(-2px)}
+.card .card-tag{font-family:"JetBrains Mono",monospace;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 12px}
+.card.tag-indigo .card-tag{color:var(--indigo)}
+.card.tag-emerald .card-tag{color:var(--emerald)}
+.card.tag-pink .card-tag{color:var(--pink)}
+.card h3{font-size:19px;line-height:1.3;letter-spacing:-.01em;margin:0 0 12px;font-weight:600}
+.card p{color:var(--fg-dim);font-size:15px;margin:0}
+.card .proof{margin-top:16px;padding-top:14px;border-top:1px dashed var(--border);color:var(--fg-muted);font-size:12.5px;font-family:"JetBrains Mono",monospace}
+
+/* Architecture */
+.arch{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin-top:24px}
+@media (max-width:880px){.arch{grid-template-columns:1fr}}
+.arch-diagram{
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01));
+  border:1px solid var(--border);border-radius:14px;padding:22px;
+}
+.arch-diagram svg{width:100%;height:auto;display:block}
+.arch-rows{display:grid;gap:14px;margin-top:16px}
+.arch-row{padding:14px 16px;border-left:2px solid var(--border-strong);background:rgba(255,255,255,.02);border-radius:0 10px 10px 0}
+.arch-row.indigo{border-left-color:var(--indigo)}
+.arch-row.emerald{border-left-color:var(--emerald)}
+.arch-row.amber{border-left-color:var(--amber)}
+.arch-row strong{color:var(--fg);display:block;margin-bottom:4px;font-size:14px}
+.arch-row span{color:var(--fg-dim);font-size:14px}
+.code-block{
+  background:#000;border:1px solid var(--border-strong);border-radius:10px;
+  padding:18px;font-family:"JetBrains Mono",monospace;font-size:13.5px;line-height:1.6;
+  overflow-x:auto;margin-top:24px;
+}
+.code-block .kw{color:var(--pink)}
+.code-block .ty{color:var(--amber)}
+.code-block .fn{color:var(--indigo)}
+.code-block .cm{color:var(--fg-muted);font-style:italic}
+.code-note{color:var(--fg-muted);font-size:14px;margin-top:14px}
+
+/* Fit grid */
+.fit{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+@media (max-width:880px){.fit{grid-template-columns:1fr}}
+.fit-col{padding:22px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
+.fit-col h3{font-size:16px;margin:0 0 12px;font-weight:600;display:flex;align-items:center;gap:8px}
+.fit-col h3 .badge{font-family:"JetBrains Mono",monospace;font-size:11px;padding:3px 8px;border-radius:6px}
+.fit-col.fit h3 .badge{background:rgba(52,211,153,.12);color:var(--emerald);border:1px solid rgba(52,211,153,.3)}
+.fit-col.notfit h3 .badge{background:rgba(244,114,182,.12);color:var(--pink);border:1px solid rgba(244,114,182,.3)}
+.fit-col p{color:var(--fg-dim);font-size:14.5px;margin:0}
+
+/* Honesty */
+.honesty{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px}
+@media (max-width:880px){.honesty{grid-template-columns:1fr}}
+.h-col{padding:22px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.02)}
+.h-col h3{font-size:14px;font-family:"JetBrains Mono",monospace;text-transform:uppercase;letter-spacing:.05em;margin:0 0 14px;font-weight:600}
+.h-col.works h3{color:var(--emerald)}
+.h-col.partial h3{color:var(--amber)}
+.h-col.missing h3{color:var(--pink)}
+.h-col ul{margin:0;padding:0;list-style:none}
+.h-col ul li{padding:6px 0;color:var(--fg-dim);font-size:14px;border-bottom:1px dashed var(--border)}
+.h-col ul li:last-child{border-bottom:0}
+.h-col ul li strong{color:var(--fg);font-weight:500}
+
+/* Grant */
+.grant{
+  background:linear-gradient(180deg,rgba(129,140,248,.06),rgba(129,140,248,.01));
+  border:1px solid rgba(129,140,248,.2);border-radius:16px;padding:32px;margin-top:24px
+}
+.grant p{color:var(--fg-dim);font-size:16px;line-height:1.7;margin:0 0 20px}
+.grant-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;font-family:"JetBrains Mono",monospace;font-size:13px}
+@media (max-width:640px){.grant-stats{grid-template-columns:1fr 1fr}}
+.grant-stats div{padding:12px 14px;background:rgba(0,0,0,.25);border:1px solid var(--border);border-radius:10px}
+.grant-stats div span{display:block;color:var(--fg-muted);font-size:11px;letter-spacing:.05em;text-transform:uppercase;margin-bottom:4px;font-family:"Inter",sans-serif}
+.grant-stats div strong{color:var(--fg);font-weight:500}
+
+/* Testimonials */
+.testimonial-call{
+  margin-top:24px;padding:28px;border:1px dashed var(--border-strong);border-radius:14px;
+  text-align:center;color:var(--fg-dim);
+}
+.testimonial-call p{margin:0 0 6px;font-size:16px}
+.testimonial-call p.lead{color:var(--fg);font-size:18px;font-weight:500;margin-bottom:14px}
+.testimonial-call a{color:var(--indigo);text-decoration:none}
+.testimonial-call a:hover{text-decoration:underline}
+
+/* Final CTA */
+.final-cta{padding:96px 0;text-align:center}
+.final-cta h2{font-size:clamp(28px,4vw,44px);font-weight:700;letter-spacing:-.015em;margin:0 0 28px}
+.final-cta .cmd-chip{font-size:16px;padding:18px 22px}
+.final-cta .links{margin-top:28px;display:flex;flex-wrap:wrap;gap:18px;justify-content:center;font-size:14.5px}
+.final-cta .links a{color:var(--fg-dim);text-decoration:none;border-bottom:1px dashed var(--border-strong);padding-bottom:2px}
+.final-cta .links a:hover{color:var(--fg);border-bottom-color:var(--indigo)}
+
+/* Footer */
+.site-footer{padding:36px 0;border-top:1px solid var(--border);color:var(--fg-muted);font-size:13.5px;text-align:center}
+
+/* Skim helpers */
+.copy-toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);background:#000;border:1px solid var(--emerald);color:var(--emerald);font-family:"JetBrains Mono",monospace;font-size:13px;padding:10px 16px;border-radius:8px;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:50}
+.copy-toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+
+<div class="bg-orbs" aria-hidden="true"></div>
+<div class="bg-grid" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/agentos/">
+      <span class="brand-mark">⟡</span>
+      <span>AgentOS</span>
+    </a>
+    <nav class="nav">
+      <a class="nav-link" href="#install">Install</a>
+      <a class="nav-link" href="#how">How it works</a>
+      <a class="nav-link" href="#honesty">What ships</a>
+      <a class="gh-cta" href="https://github.com/zzhiyuann/agentos" rel="noopener">View on GitHub →</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow"><span class="dot"></span>Open source · MIT · 480+ tests · TypeScript</span>
+    <h1 class="hero-title">An operating system for <em>AI-native companies.</em></h1>
+    <p class="hero-sub">Turn Linear into the control plane for a team of AI agents, with persistent identity, real memory, and the authority to do work.</p>
+    <div class="hero-cta">
+      <button class="cmd-chip" data-copy="npx create-agentos-company@latest" aria-label="Copy install command">
+        <span class="prompt">$</span>
+        <span>npx create-agentos-company@latest</span>
+        <span class="copy-icon">copy</span>
+      </button>
+      <a class="btn-secondary" href="https://github.com/zzhiyuann/agentos" rel="noopener">Read the source →</a>
+    </div>
+    <p class="hero-supporting">You make the high-leverage calls. Your AI C-suite runs the rest.</p>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="terminal-bar"><span></span><span></span><span></span></div>
+      <div class="term-line"><span class="ts">14:02</span> <span class="role role-cto">cto</span> on RYA-42: scoped the migration into 3 sub-issues, dispatched lead-engineer.</div>
+      <div class="term-line"><span class="ts">14:03</span> <span class="role role-eng">lead-engineer</span> on RYA-42-1: branch agent/migration created, draft PR up.</div>
+      <div class="term-line"><span class="ts">14:11</span> <span class="role role-cpo">cpo</span> on RYA-42: shipped UX review, two open questions for ceo.</div>
+      <div class="term-line system">→ each comment posts from its own Linear identity, not a shared bot account.</div>
+      <div class="term-cmd"><span class="prompt">$</span> aos jump RYA-42</div>
+      <div class="term-line system">→ attaches your terminal directly to the running agent's tmux session.</div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTALL -->
+<section class="block" id="install">
+  <div class="wrap">
+    <p class="kicker">Install</p>
+    <h2 class="title">Install in 60 seconds.</h2>
+    <p class="lede">One command scaffolds a workspace, wires up Linear OAuth, and spins up your first agent.</p>
+
+    <div class="install-grid">
+      <button class="install-cmd" data-copy="npx create-agentos-company@latest" aria-label="Copy npx command">
+        <span class="label">Recommended</span>
+        <span class="prompt">$</span> npx create-agentos-company@latest
+      </button>
+
+      <div class="install-cmd muted">
+        <span class="label">Manual install</span>
+<span class="prompt">$</span> git clone https://github.com/zzhiyuann/agentos.git
+<span class="prompt">$</span> cd agentos &amp;&amp; npm install &amp;&amp; npm run build &amp;&amp; npm link
+<span class="prompt">$</span> aos setup --api-key &lt;LINEAR_API_KEY&gt;
+      </div>
+
+      <div class="install-cmd muted">
+        <span class="label">Docker</span>
+<span class="prompt">$</span> docker compose up -d
+      </div>
+    </div>
+
+    <p class="platform-note">macOS (Keychain native) or Linux. Requires Node.js 22+ and tmux on the execution host. Full prerequisites in the repo.</p>
+  </div>
+</section>
+
+<!-- THREE FEATURES -->
+<section class="block" id="features">
+  <div class="wrap">
+    <p class="kicker">What it is</p>
+    <h2 class="title">Not a chatbot. Not a framework. A team you manage.</h2>
+    <p class="lede">Three properties make AgentOS different from anything else you can install today.</p>
+
+    <div class="cards">
+      <article class="card tag-indigo">
+        <p class="card-tag">01 · Identity</p>
+        <h3>Agents that remember.</h3>
+        <p>Each agent is a long-lived identity with a role, a persona file, and its own memory directory. Kill the session, spawn a new one, and it starts with everything it has ever learned. No context-window bloat. No re-explaining decisions from last week.</p>
+        <p class="proof">Death &amp; resurrection pattern · memory-backed, not context-backed</p>
+      </article>
+
+      <article class="card tag-emerald">
+        <p class="card-tag">02 · Control plane</p>
+        <h3>Your project tool <em>is</em> the dispatch system.</h3>
+        <p>Create a Linear issue, and the right agent picks it up. Comments are how agents communicate. Status transitions are how work flows. No new UI, no dashboard to babysit, no duplicate source of truth.</p>
+        <p class="proof">Works with your Linear workspace · one config file · webhook + polling fallback</p>
+      </article>
+
+      <article class="card tag-pink">
+        <p class="card-tag">03 · Observability</p>
+        <h3>Watch every agent think, in real time.</h3>
+        <p>Every agent runs in a tmux session on your box. <code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">aos jump RYA-42</code> attaches a terminal window directly to a running agent. See what it's doing, kill it if it goes off the rails, and the memory it built up survives the kill.</p>
+        <p class="proof">Open terminal, not a hosted log viewer · MIT, auditable, yours</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ARCHITECTURE -->
+<section class="block" id="how">
+  <div class="wrap">
+    <p class="kicker">How it works</p>
+    <h2 class="title">Two planes. One file as the seam.</h2>
+    <p class="lede">Linear owns intent. AgentOS owns execution. Neither duplicates the other.</p>
+
+    <div class="arch">
+      <div class="arch-diagram">
+        <svg viewBox="0 0 480 360" role="img" aria-label="Architecture diagram: Linear (intent plane) and AgentOS (execution plane) connected via a HANDOFF.md seam.">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#818cf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#34d399"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a0a3b1"/></marker>
+          </defs>
+          <!-- Linear plane -->
+          <rect x="20" y="20" width="200" height="320" rx="14" fill="rgba(129,140,248,0.06)" stroke="rgba(129,140,248,0.45)" stroke-width="1.5"/>
+          <text x="120" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#818cf8" letter-spacing="2">INTENT PLANE</text>
+          <text x="120" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#e6e7ee" font-weight="600">Linear</text>
+          <g font-family="Inter, sans-serif" font-size="12.5" fill="#a0a3b1">
+            <rect x="40" y="100" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="120" y="123" text-anchor="middle">Issues</text>
+            <rect x="40" y="148" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="120" y="171" text-anchor="middle">Comments per agent</text>
+            <rect x="40" y="196" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="120" y="219" text-anchor="middle">Status transitions</text>
+            <rect x="40" y="244" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="120" y="267" text-anchor="middle">Agent sessions</text>
+          </g>
+
+          <!-- AgentOS plane -->
+          <rect x="260" y="20" width="200" height="320" rx="14" fill="rgba(52,211,153,0.05)" stroke="rgba(52,211,153,0.4)" stroke-width="1.5"/>
+          <text x="360" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="#34d399" letter-spacing="2">EXECUTION PLANE</text>
+          <text x="360" y="76" text-anchor="middle" font-family="Inter, sans-serif" font-size="18" fill="#e6e7ee" font-weight="600">AgentOS</text>
+          <g font-family="Inter, sans-serif" font-size="12.5" fill="#a0a3b1">
+            <rect x="280" y="100" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="360" y="123" text-anchor="middle">Webhook · Router</text>
+            <rect x="280" y="148" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="360" y="171" text-anchor="middle">Priority queue · SQLite</text>
+            <rect x="280" y="196" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="360" y="219" text-anchor="middle">Persona loader</text>
+            <rect x="280" y="244" width="160" height="36" rx="8" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)"/>
+            <text x="360" y="267" text-anchor="middle">Runner adapters · tmux</text>
+          </g>
+
+          <!-- Seam -->
+          <line x1="220" y1="180" x2="260" y2="180" stroke="#a0a3b1" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+          <rect x="180" y="305" width="120" height="28" rx="6" fill="#0a0a0f" stroke="#fbbf24" stroke-width="1"/>
+          <text x="240" y="324" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="11" fill="#fbbf24">HANDOFF.md</text>
+        </svg>
+      </div>
+
+      <div class="arch-rows">
+        <div class="arch-row indigo"><strong>Linear side</strong><span>Issues, projects, agent sessions, comments. You interact here.</span></div>
+        <div class="arch-row emerald"><strong>AgentOS side</strong><span>Webhook server, router, priority queue, SQLite state, persona loader, runner adapters. Runs on your box.</span></div>
+        <div class="arch-row amber"><strong>The seam</strong><span><code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">HANDOFF.md</code> on disk is how agents report completion. The monitor polls every 15 seconds. Simple, debuggable, offline-friendly.</span></div>
+      </div>
+    </div>
+
+    <pre class="code-block"><span class="cm">// The only interface the runtime is coupled to:</span>
+<span class="kw">interface</span> <span class="ty">RunnerAdapter</span> {
+  <span class="fn">spawn</span>(opts: <span class="ty">SpawnOptions</span>): <span class="ty">Promise</span>&lt;<span class="ty">SpawnResult</span>&gt;;
+  <span class="fn">isAlive</span>(sessionId: <span class="ty">string</span>): <span class="ty">boolean</span>;
+  <span class="fn">kill</span>(sessionId: <span class="ty">string</span>): <span class="ty">void</span>;
+  <span class="fn">captureOutput</span>(sessionId: <span class="ty">string</span>, lines?: <span class="ty">number</span>): <span class="ty">string</span>;
+}</pre>
+    <p class="code-note">Add Gemini, a local model, or any new runtime by implementing one interface. Today, two adapters ship: Claude Code and Codex.</p>
+  </div>
+</section>
+
+<!-- FIT -->
+<section class="block" id="fit">
+  <div class="wrap">
+    <p class="kicker">Who it&rsquo;s for</p>
+    <h2 class="title">Pick the shape that fits you.</h2>
+
+    <div class="fit">
+      <div class="fit-col fit">
+        <h3>Solo founders <span class="badge">fit</span></h3>
+        <p>You're trying to move faster than one person should be able to. You've hit the limit of prompting a single chatbot. You already use Linear. You want AI teammates that know what you decided yesterday.</p>
+      </div>
+      <div class="fit-col fit">
+        <h3>Small teams <span class="badge">fit</span></h3>
+        <p>You want to add AI agents to an existing engineering flow without introducing a new tool your team has to learn. You need agent comments to show up as their own identities, not all as &ldquo;the AI account.&rdquo;</p>
+      </div>
+      <div class="fit-col notfit">
+        <h3>Pipeline builders <span class="badge">not a fit</span></h3>
+        <p>You need to orchestrate a graph of LLM calls inside one application. That's a workflow problem, not a team problem. Use <strong>LangGraph</strong>, it's excellent at what AgentOS doesn't try to do.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HONESTY -->
+<section class="block" id="honesty">
+  <div class="wrap">
+    <p class="kicker">Honesty</p>
+    <h2 class="title">What works. What's partial. What's missing.</h2>
+    <p class="lede">If you find a gap on this page that the README doesn't cover, file an issue. We track it in public.</p>
+
+    <div class="honesty">
+      <div class="h-col works">
+        <h3>Works today</h3>
+        <ul>
+          <li>Persistent agent identity (OAuth-per-agent, Linear-native)</li>
+          <li>Cross-session memory (file-backed, zero-dependency)</li>
+          <li>Agent-to-agent delegation (<code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">dispatch</code>, <code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">handoff</code>, <code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">ask</code>)</li>
+          <li>Terminal observability (<code style="font-family:'JetBrains Mono',monospace;color:var(--fg)">aos jump</code>, tmux-based)</li>
+          <li>Org hierarchy and priority queue</li>
+          <li>Multi-agent routing via webhook or polling</li>
+          <li>Claude Code and Codex runtime adapters</li>
+        </ul>
+      </div>
+
+      <div class="h-col partial">
+        <h3>Partially implemented</h3>
+        <ul>
+          <li><strong>Multi-model runtime.</strong> The adapter interface is generic; only Claude runners ship today. Gemini and local are top-3 requested contributions.</li>
+          <li><strong>Budget controls.</strong> Per-attempt cost is tracked in SQLite; per-agent spending caps are next up.</li>
+          <li><strong>Memory retrieval.</strong> Files load wholesale into prompts; embeddings and search are on the roadmap.</li>
+        </ul>
+      </div>
+
+      <div class="h-col missing">
+        <h3>Intentionally missing</h3>
+        <ul>
+          <li>No hosted version. Runs on your infrastructure.</li>
+          <li>No web UI. Linear is the UI.</li>
+          <li>No auth server. OAuth is per-agent, managed locally.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANT -->
+<section class="block" id="oss">
+  <div class="wrap">
+    <p class="kicker">Public infrastructure</p>
+    <h2 class="title">Open-source public infrastructure for the AI-agent era.</h2>
+
+    <div class="grant">
+      <p>AgentOS is open-source infrastructure, not a product with a free tier. It is released under the MIT license, runs on the user's own machines, and ships with no telemetry, no hosted dependency, and no commercial upsell path. Its design goals are the goals of public infrastructure: durability, auditability, extensibility, and neutrality. Anyone can run it. Anyone can fork it. Anyone can replace the Linear adapter with a Jira or GitHub Projects adapter by implementing a small interface. Development is transparent: the roadmap, retrospectives, and design documents live in the repository. The project is maintained by a single developer today and is actively seeking grant support (Sovereign Tech Fund, GitHub Accelerator, Future of Coding) to fund adapter breadth, security review, and long-term maintainer runway.</p>
+
+      <div class="grant-stats">
+        <div><span>License</span><strong>MIT</strong></div>
+        <div><span>TypeScript</span><strong>18,000+ lines</strong></div>
+        <div><span>Tests</span><strong>480+ passing</strong></div>
+        <div><span>Runtime deps</span><strong>5</strong></div>
+        <div><span>External services</span><strong>Linear (replaceable)</strong></div>
+        <div><span>Telemetry</span><strong>None</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS PLACEHOLDER -->
+<section class="block" id="stories">
+  <div class="wrap">
+    <p class="kicker">Stories</p>
+    <h2 class="title">What people are saying.</h2>
+
+    <div class="testimonial-call">
+      <p class="lead">No fake quotes. We're collecting early-adopter stories.</p>
+      <p>If AgentOS has moved something in your workflow, for better or worse, we want to hear it.</p>
+      <p>DM <a href="https://x.com/zzhiyuann" rel="noopener">@zzhiyuann on X</a> or open an issue on <a href="https://github.com/zzhiyuann/agentos/issues" rel="noopener">GitHub</a>. Honest reviews ship first.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Your AI team. 60 seconds away.</h2>
+    <button class="cmd-chip" data-copy="npx create-agentos-company@latest" aria-label="Copy install command">
+      <span class="prompt">$</span>
+      <span>npx create-agentos-company@latest</span>
+      <span class="copy-icon">copy</span>
+    </button>
+    <div class="links">
+      <a href="https://github.com/zzhiyuann/agentos" rel="noopener">View source</a>
+      <a href="https://github.com/zzhiyuann/agentos/blob/main/docs/GETTING-STARTED.md" rel="noopener">Getting started</a>
+      <a href="https://github.com/zzhiyuann/agentos/issues" rel="noopener">Roadmap and issues</a>
+      <a href="https://ryanwang.cc">The author</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    Built by <a style="color:var(--fg-dim)" href="https://ryanwang.cc">Ryan Wang</a>. MIT licensed. Open source because this is what I needed and I think you might too.
+  </div>
+</footer>
+
+<div class="copy-toast" id="copy-toast">copied to clipboard</div>
+
+<script>
+(function(){
+  var toast = document.getElementById('copy-toast');
+  function showToast(){
+    toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(function(){ toast.classList.remove('show'); }, 1400);
+  }
+  document.querySelectorAll('[data-copy]').forEach(function(el){
+    el.addEventListener('click', function(){
+      var text = el.getAttribute('data-copy');
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(showToast).catch(function(){});
+      } else {
+        var ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();
+        try{document.execCommand('copy');showToast();}catch(e){}
+        document.body.removeChild(ta);
+      }
+      el.classList.add('copied');
+      setTimeout(function(){ el.classList.remove('copied'); }, 1200);
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
